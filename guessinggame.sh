@@ -15,7 +15,11 @@ read response
 if [[ $answer -eq $response ]]
 then
 	g
-else
+elif [[ $answer -le $response ]]
+then
 	clear
+	echo "your guess is too high"
+else
+	echo "your guess is too low"
 fi
 done
